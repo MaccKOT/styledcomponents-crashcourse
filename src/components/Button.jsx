@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
 
+// пример анимации
 const rotateAnimation = keyframes`
 0% {
     transform: rotateZ(0deg);
@@ -10,8 +11,26 @@ const rotateAnimation = keyframes`
 }
 `;
 
+const bounceAnimation = keyframes`
+0%, 100%, 20%, 50%, 80% {
+  -webkit-transform: translateY(0);
+  -ms-transform:     translateY(0);
+  transform:         translateY(0);
+}
+40% {
+  -webkit-transform: translateY(-30px);
+  -ms-transform:     translateY(-30px);
+  transform:         translateY(-30px);
+}
+60% {
+  -webkit-transform: translateY(-15px);
+  -ms-transform:     translateY(-15px);
+  transform:         translateY(-15px);
+}
+`;
+
 const StyledButton = styled.button.attrs((props) => ({
-  outlined: true,
+  outlined: true, // дефолтные параметры
 }))`
   border: none;
   padding: 10px 15px;
@@ -21,7 +40,7 @@ const StyledButton = styled.button.attrs((props) => ({
     outline: none;
   }
   &: hover {
-    animation: ${rotateAnimation} 1s infinite linear;
+    animation: ${bounceAnimation} 1s linear;
   }
   align-self: ${(props) => props.align || 'stretch'};
 
@@ -40,6 +59,7 @@ const StyledButton = styled.button.attrs((props) => ({
     `}
 `;
 
+// пример наследования свойств в новом компоненте
 const LargeButton = styled(StyledButton)`
   font-size: 32px;
 `;

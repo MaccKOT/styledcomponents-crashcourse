@@ -1,6 +1,6 @@
 # Styled Components & React ПОЛНЫЙ КУРС
 
-Original video: [https://www.youtube.com/watch?v=cNUTCKq-\_-Y](https://www.youtube.com/watch?v=cNUTCKq-_-Y)
+Original video: [https://www.youtube.com/watch?v=cNUTCKq-\_-Y](https://www.youtube.com/watch?v=cNUTCKq-_-Y) by Ulbi TV
 
 Original code repo: [https://github.com/utimur/styled-components-course](https://github.com/utimur/styled-components-course)
 

@@ -26,7 +26,7 @@ const Console = ({ color, ...props }) => {
   const [lines, setLines] = useState(['C/users/ULBI_TV>']);
 
   const onKeyPress = (e) => {
-    if (e.charCode == 13) {
+    if (e.charCode === 13) {
       setLines([...lines, 'C/users/ULBI_TV>']);
     }
   };
@@ -35,7 +35,9 @@ const Console = ({ color, ...props }) => {
     <Flex>
       <Flex direction={'column'} margin='0 10px'>
         {lines.map((line) => (
-          <Line color={color}>{line}</Line>
+          <Line color={color} key={Math.random() * 1000}>
+            {line}
+          </Line>
         ))}
       </Flex>
       <StyledConsole onKeyPress={onKeyPress} color={color} {...props} />
